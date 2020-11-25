@@ -15,7 +15,9 @@ X=
 
 
 n = 2
+
 node1 = A
+
 node2 = B
 
 Graph Formed:
