@@ -18,7 +18,8 @@ n = 2
 
 node1 = A
 
-node2 = B
+node2 = D
 
 Graph Formed:
+
 ![Alt text](/GraphImageFrame1606259566149.png?raw=true "GraphImage")
