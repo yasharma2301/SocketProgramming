@@ -2,7 +2,7 @@
 
 This project uses TCP sockets to connect a client with server. The client sends server 4 values, for example X, n, B, C where,  X is the adjacency matrix of a directed graph with 5 nodes A B C D E, and n is the length of the path from node B to node C. The server responds with a YES/NO string based on the fact that path exists or not followed by an image for confirmation.
 
-# Results
+# Example
 After passing the parameters as:
 X=
 |  | A | B | C | D | E |
@@ -19,6 +19,9 @@ n = 2
 node1 = A
 
 node2 = D
+
+# Results
+Yes,there exists a path of length 2 from node A to node D.
 
 Graph Formed:
 
