@@ -76,6 +76,7 @@ public final class Server {
             } else {
                 ps.println("No, there is no path of length " + pathLength + " from node " + node1 + " to node " + node2 + ".");
             }
+            // make your own grpah frame here
             socket.close();
             dataInputStream.close();
             ps.close();
@@ -209,7 +210,6 @@ class GraphFrame extends JFrame {
         };
         add(c);
         setSize(550, 550);
-        c.setBackground(Color.GRAY);
         setVisible(false);
         clickImage(c, outputStream);
     }
