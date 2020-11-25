@@ -35,18 +35,14 @@ public final class Server {
     private PrintStream ps = null;
     private OutputStream outputStream = null;
 
-    public Server(int port) {
+    public Server(int port) {     
         try {
             serverSocket = new ServerSocket(port);
-            socket = serverSocket.accept(); // accepts the client 
+            socket = serverSocket.accept(); 
             dataInputStream = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
             ps = new PrintStream(socket.getOutputStream());
             outputStream = socket.getOutputStream();
-        } catch (IOException e) {
-            System.out.println(e);
-        }
 
-        try {
             int length = dataInputStream.readInt();
             adjList = new ArrayList[length];
             adjList2 = new ArrayList[length];
@@ -73,7 +69,6 @@ public final class Server {
             map.put('C', 2);
             map.put('D', 3);
             map.put('E', 4);
-
             getAllPaths(map.get(node1), map.get(node2), length, pathLength);
 
             if (answerPathList.size() > 0) {
@@ -81,13 +76,6 @@ public final class Server {
             } else {
                 ps.println("No, there is no path of length " + pathLength + " from node " + node1 + " to node " + node2 + ".");
             }
-
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-
-        System.out.println("Closing connection");
-        try {
             socket.close();
             dataInputStream.close();
             ps.close();
